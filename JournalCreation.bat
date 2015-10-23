@@ -22,7 +22,9 @@ if %mm%==12 set mo-name=December
 
 set path=D:\Personal\Journal\%yyyy%\%mo-name%\%dateNew%.docx
 set monthPath=D:\Personal\Journal\%yyyy%\%mo-name%
+set yearPath=D\Personal\Journal\%yyyy%
 
+if not exist "%yearPath%" mkdir %yearPath%
 if not exist "%monthPath%" mkdir %monthPath%
 if not exist "%path%" copy /y nul "%path%"
 start %path%
