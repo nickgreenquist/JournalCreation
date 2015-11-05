@@ -1,0 +1,14 @@
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\JournalWordCounter.exe.config
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\JournalWordCounter.exe
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\JournalWordCounter.pdb
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\obj\Debug\JournalWordCounter.Form1.resources
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\obj\Debug\JournalWordCounter.Properties.Resources.resources
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\obj\Debug\JournalWordCounter.csproj.GenerateResource.Cache
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\obj\Debug\JournalWordCounter.exe
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\obj\Debug\JournalWordCounter.pdb
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\obj\Debug\JournalWordCounter.csprojResolveAssemblyReference.cache
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\DocumentFormat.OpenXml.dll
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\Microsoft.SharePoint.Client.dll
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\Microsoft.SharePoint.WorkflowServices.Activities.dll
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
+c:\users\nick\documents\visual studio 2015\Projects\JournalWordCounter\JournalWordCounter\bin\Debug\DocumentFormat.OpenXml.xml
