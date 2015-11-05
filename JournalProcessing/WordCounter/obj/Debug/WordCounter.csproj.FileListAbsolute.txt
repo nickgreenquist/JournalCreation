@@ -1,0 +1,11 @@
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\bin\Debug\WordCounter.exe.config
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\obj\Debug\WordCounter.csprojResolveAssemblyReference.cache
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\obj\Debug\WordCounter.Form1.resources
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\obj\Debug\WordCounter.Properties.Resources.resources
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\obj\Debug\WordCounter.csproj.GenerateResource.Cache
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\bin\Debug\WordCounter.exe
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\bin\Debug\WordCounter.pdb
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\obj\Debug\WordCounter.exe
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\WordCounter\obj\Debug\WordCounter.pdb

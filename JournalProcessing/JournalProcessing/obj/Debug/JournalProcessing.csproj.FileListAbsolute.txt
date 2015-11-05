@@ -1,0 +1,2 @@
+c:\users\nick\documents\visual studio 2015\Projects\JournalProcessing\JournalProcessing\bin\Debug\JournalProcessing.exe.config
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\JournalProcessing\bin\Debug\JournalProcessing.exe.config
