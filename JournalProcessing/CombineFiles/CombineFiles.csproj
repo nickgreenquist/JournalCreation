@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D17B2A0D-E8A5-4FF3-8F15-68A7661D8A9F}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CombineFiles</RootNamespace>
     <AssemblyName>CombineFiles</AssemblyName>
@@ -32,7 +32,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="RasterEdge.Imaging.Basic, Version=9.8.4.51106, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\RasterEdge.DocImageSDK9.8.4(release)\Bin\DotNet Framework4.0\x64\x86\RasterEdge.Imaging.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="RasterEdge.XDoc.Word, Version=9.8.4.51106, Culture=neutral, PublicKeyToken=b638ab5dea8d8105, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\RasterEdge.DocImageSDK9.8.4(release)\Bin\DotNet Framework4.0\x64\x86\RasterEdge.XDoc.Word.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +56,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
