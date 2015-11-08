@@ -38,14 +38,39 @@ namespace CombineFiles
             List<string> folders = foldersArray.ToList();
             folders.Sort();
 
-            //keep getting all subfolders until we hit files
-            foreach(string folder in foldersArray)
+            bool isDir = false;
+
+            //keep getting all subfolders of the folder we dragged in until we hit files
+            foreach (string folder in foldersArray)
             {
-                Console.WriteLine(folder);
-                GetSubFolders(folder);
+                //if anything we dropped is a file, we want to add those
+                try {
+                    isDir = (File.GetAttributes(folder) & FileAttributes.Directory)
+                     == FileAttributes.Directory;
+
+                    string ext = Path.GetExtension(folder);
+                    if (!isDir && ext.Equals(".docx"))
+                    {
+                        OrderedListOfFiles.Add(folder);
+                    }
+                    else
+                    {
+                        GetSubFolders(folder);
+                    }
+                }
+                catch
+                {
+                    //this should never hit
+                    isDir = true;
+                }
             }
 
-            DOCXDocument.CombineDocument(OrderedListOfFiles.ToArray(), folders[0] + "test.docx");
+            foreach(string file in OrderedListOfFiles)
+            {
+                Console.WriteLine(file);
+            }
+
+            DOCXDocument.CombineDocument(OrderedListOfFiles.ToArray(), folders[0] + ".docx");
 
             //reset lists
             OrderedListOfFiles.Clear();
@@ -59,6 +84,7 @@ namespace CombineFiles
         
         private void GetSubFolders(string path)
         {
+            Console.WriteLine(path);
             string[] foldersArray = Directory.GetDirectories(path);
             List<string> folders = foldersArray.ToList();
             folders.Sort();
@@ -74,11 +100,13 @@ namespace CombineFiles
             foreach (string file in files)
             {
                 string ext = Path.GetExtension(file);
-                if (ext.Equals(".docx") || ext.Equals(".doc"))
+                if (ext.Equals(".docx"))
                 {
                     try
                     {
+                        //this will check if the file is clean
                         TryToOpenWord(file);
+                    
                         OrderedListOfFiles.Add(file);
                     }
                     catch

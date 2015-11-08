@@ -17,3 +17,4 @@ D:\Personal\Journal\JournalCodeProjects\JournalProcessing\CombineFiles\bin\Debug
 D:\Personal\Journal\JournalCodeProjects\JournalProcessing\CombineFiles\bin\Debug\RasterEdge.Imaging.Font.dll
 D:\Personal\Journal\JournalCodeProjects\JournalProcessing\CombineFiles\bin\Debug\RasterEdge.Imaging.Processing.dll
 D:\Personal\Journal\JournalCodeProjects\JournalProcessing\CombineFiles\bin\Debug\RasterEdge.XImage.Raster.Core.dll
+D:\Personal\Journal\JournalCodeProjects\JournalProcessing\CombineFiles\obj\Debug\CombineFiles.Form1.resources
