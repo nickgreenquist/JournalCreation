@@ -20,9 +20,9 @@ if %mm%==10 set mo-name=10-October
 if %mm%==11 set mo-name=11-November
 if %mm%==12 set mo-name=12-December
 
-set path=D:\Personal\Journal\%yyyy%\%mo-name%\%dateNew%.docx
-set monthPath=D:\Personal\Journal\%yyyy%\%mo-name%
-set yearPath=D:\Personal\Journal\%yyyy%
+set path=D:\Personal\Journal\JournalFiles\%yyyy%\%mo-name%\%dateNew%.docx
+set monthPath=D:\Personal\Journal\JournalFiles\%yyyy%\%mo-name%
+set yearPath=D:\Personal\Journal\JournalFiles\%yyyy%
 
 if not exist "%yearPath%" mkdir %yearPath%
 if not exist "%monthPath%" mkdir %monthPath%

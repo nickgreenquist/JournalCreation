@@ -18,10 +18,11 @@ namespace WordCounter
     public partial class Form1 : Form
     {
 
-        public class Word
+        public class WordCount
         {
-            public string word { get; set; }
-            public int count { get; set; }
+            public string Word { get; set; }
+            public int Count { get; set; }
+            public int Rank { get; set; }
         }
 
         public Form1()
@@ -34,7 +35,7 @@ namespace WordCounter
 
         private void Form1_DragDrop(object sender, DragEventArgs e)
         {
-            List<Word> wordCount = new List<Word>();
+            List<WordCount> wordCount = new List<WordCount>();
             string[] filesArray = (string[])e.Data.GetData(DataFormats.FileDrop);
             List<string> files = filesArray.ToList();
             files.Sort();
@@ -43,6 +44,9 @@ namespace WordCounter
             {
                 Console.WriteLine(file);
                 string journalEntry = TextFromWord(file);
+                journalEntry = journalEntry.ToUpper();
+                Regex rgx = new Regex("[^a-zA-Z0-9 ']");
+                journalEntry = rgx.Replace(journalEntry, "");
                 List<string> words = journalEntry.Split(' ').ToList<string>();
                 words.Sort();
                 Int32 index = 0;
@@ -56,12 +60,16 @@ namespace WordCounter
                 for (int i = 0; i < words.Count; i++)
                 {
                     int count = Regex.Matches(journalEntry, words[i]).Count;
-                    Word newWord = new Word();
-                    newWord.word = words[i];
-                    newWord.count = count;
+                    WordCount newWord = new WordCount();
+                    newWord.Word = words[i];
+                    newWord.Count = count;
                     wordCount.Add(newWord);
                 }
-                wordCount = wordCount.OrderBy(w => w.count).ToList();
+                wordCount = wordCount.OrderBy(w => w.Count).ToList();
+                for(int i = 0; i < wordCount.Count; i++)
+                {
+                    wordCount[i].Rank = wordCount.Count - i;
+                }
                 dataGridView1.DataSource = wordCount;
             }
         }
@@ -101,6 +109,38 @@ namespace WordCounter
 
             }
             return textBuilder.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                Console.WriteLine(row.Cells[0].Value);
+                if (row.Cells[0].Value.ToString().Equals(textBox1.Text.ToUpper()))
+                {
+                    dataGridView1.CurrentCell = row.Cells[0];
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //nothing
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    Console.WriteLine(row.Cells[0].Value);
+                    if (row.Cells[0].Value.ToString().Equals(textBox1.Text.ToUpper()))
+                    {
+                        dataGridView1.CurrentCell = row.Cells[0];
+                    }
+                }
+            }
         }
     }
 }
